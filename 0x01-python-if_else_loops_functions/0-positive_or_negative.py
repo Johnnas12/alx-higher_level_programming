@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 import random
+
+# Generate a random integer between -10 and 10
 number = random.randint(-10, 10)
-lastdigit = abs(number) % 10
 
-if number < 0:
-    lastdigit = -(lastdigit)
-text = "Last digit of {} is {}".format(number, lastdigit)
-
-if lastdigit > 5:
-    print(f"{text} and is greater than 5")
-elif lastdigit == 0:
-    print(f"{text} and is 0")
-elif lastdigit < 6:
-    print(f"{text} and is less than 6 and not 0")
+# Check if the number is positive, negative, or zero
+if number > 0:
+    print(f"{number} is positive.")
+elif number < 0:
+    print(f"{number} is negative.")
+else:
+    print(f"{number} is zero.")
