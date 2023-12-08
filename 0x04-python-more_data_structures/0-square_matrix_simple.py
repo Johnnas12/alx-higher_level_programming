@@ -1,11 +1,8 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    # Create a new matrix with the same size as the input matrix
-    result_matrix = [[0 for _ in range(len(row))] for row in matrix]
+    new_matrix = matrix.copy()
 
-    # Iterate through each element in the matrix and compute the square
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            result_matrix[i][j] = matrix[i][j] ** 2
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
 
-    return result_matrix
-
+    return (new_matrix)
